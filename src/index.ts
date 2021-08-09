@@ -2,7 +2,7 @@ import { ExtensionContext, services, workspace, LanguageClient } from 'coc.nvim'
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const config = workspace.getConfiguration('coc-jls')
-  const isEnable = config.get<boolean>('enable', true)
+  const isEnable = config.get<boolean>('enable', false)
   if (!isEnable) {
     return
   }
